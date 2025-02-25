@@ -2,26 +2,21 @@
 
 # print(doubled) # Output: [2, 4, 6, 8, 10]
 
-# def reverse_sentence(string):
-#     split_string = string.split()
-#     answerString = ""
-#     lengthOfString = len(split_string)
-#     for i in range(lengthOfString - 1, -1, -1):
-#         answerString += split_string[I] + " "
-#     return answerString
+def reverse_sentence1(string):
+    split_string = string.split()
+    answerString = ""
+    lengthOfString = len(split_string)
+    for i in range(lengthOfString - 1, -1, -1):
+        answerString += split_string[i] + " "
+    return answerString.strip()
 
-from audioop import reverse
-
-
-def reverse_sentence(string):
+def reverse_sentence2(string):
     s = string.split()
-    reversedArray = ""
-    for str in s:
-        reversedArray.join(str)
-        print(reversedArray)
+    reversedArray = s[::-1] #reverse the list of words
+    return ' '.join(reversedArray) # join reversed list into a string
 
 sentence = "tubby little cubby all stuffed with fluff"
-print(reverse_sentence(sentence))
+print(reverse_sentence2(sentence))
 
 sentence = "Pooh"
-print(reverse_sentence(sentence))
+print(reverse_sentence2(sentence))
