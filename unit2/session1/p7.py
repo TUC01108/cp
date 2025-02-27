@@ -7,7 +7,23 @@
 # Once you've come up with your second solution, compare the two. Is one 
 # solution better than the other? Why or why not?
 
+from collections import Counter
 def max_audience_performances(audiences):
+    audience_count = {}
+    for audience in audiences:
+        if audience in audience_count:
+            audience_count[audience] += 1
+        else:
+            audience_count[audience] = 1
+    max_size = max(audiences)
+
+    if audience_count[max_size] > 1:
+        combined_audience_size = max_size * audience_count[max_size]
+    else:
+        combined_audience_size = max_size
+    return combined_audience_size
+
+
     pass
 
 # Example Usage:
