@@ -1,8 +1,4 @@
-class Node:
-    def __init__(self, info):
-        self.info = info
-        self.left = None
-        self.right = None
+
 
 # def insert(root, key):
 #     if root is None:
@@ -30,7 +26,11 @@ def preOrder(root):
     preOrder(root.left)
     preOrder(root.right) 
 
-
+class Node:
+    def __init__(self, info):
+        self.info = info
+        self.left = None
+        self.right = None
 # # Construct the binary tree from the given sequence
 # sequence = [1, 2, 5, 3, 6, 4]
 # root = None
