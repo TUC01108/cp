@@ -1,29 +1,34 @@
-class singly_list:
-    def __init__(self, next, value):
+
+# Problem 1: Wild Goose Chase
+
+# You're a detective and have been given an anonymous tip on your latest case, but something about it seems fishy - you suspect the clue might be a red herring meant to send you around in circles. Write a function is_circular() that accepts the head of a singly linked list clues and returns True if the tail of the linked list points at the head of the linked list. Otherwise, return False.
+
+# Evaluate the time and space complexity of your solution. Define your variables and provide a rationale for why you believe your solution has the stated time and space complexity.
+
+class Node:
+    def __init__(self, value, next=None):
         self.value = value
         self.next = next
 
-def intersection(singly_list1, singly_list2):
-    head =
-    # check if either list is empty then return None.
-    if not singly_list1 or singly_list2:
-        return None
-    # two pointers that iterate through each list when values match then we return that value 
-    itr1 = singly_list1.head
-    itr2 = singly_list2.head
+def is_circular(clues):
+	pass
 
-    while itr1 != itr2:
-        itr1 = itr1.next
-        itr2 = itr2.next
-    return itr1
-    
+# Example Usage:
 
-    # else if we make it to end of one or both return None.
+# Circular linked list of 3 clues where 3rd clue points to 1st clue
 
-singly_list1 = [1,2,3,4,5]
-singly_list2 = [9,8,3,4,5]
-print(intersection(singly_list1,singly_list2))
+clue1 = Node("The stolen goods are at an abandoned warehouse")
+clue2 = Node("The mayor is accepting bribes")
+clue3 = Node("They dumped their disguise in the lake")
+clue1.next = clue2
+clue2.next = clue3
+clue3.next = clue1
 
+print(is_circular(clue1))
+
+# Example Output:
+
+# True
 
 
 
